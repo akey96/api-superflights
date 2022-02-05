@@ -20,5 +20,6 @@ export class UserService {
         const hash = await this.hashPassword(userDTO.password);
         const newUser = new this.model({...userDTO, password: hash});
         return await newUser.save();
+        
     }
 }
