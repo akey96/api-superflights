@@ -12,10 +12,7 @@ import { UserModule } from './user/user.module';
       envFilePath: ['.env.development'],
       isGlobal: true
     }),
-    MongooseModule.forRoot(process.env.URI_MONGODB, {
-      useCreateIndex: true,
-      useFindAndModify: false
-    }),
+    MongooseModule.forRoot(process.env.URI_MONGODB),
     UserModule
   ],
   controllers: [AppController],
